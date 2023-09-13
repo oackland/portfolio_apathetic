@@ -1,9 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
+
+    <div class="this-container"></div>
+    <section class="my-container">
+   <div class="this-container">
+{#        <h1>Welcome to My Digital Space!</h1>#}
+{#        <p>Hello there!</p>#}
+{#        <p>Thank you for taking a moment to dive into my web portfolio. As you navigate through, you'll discover that being a fullstack software engineer isn't just a job title for me—it's my fervent passion. Every line of code I write, every application I develop, and every problem I solve is driven by my profound love for the craft.</p>#}
+{#        <p>I've poured countless hours into my work, not with the primary intention of remuneration, but with the pure joy of creation and the insatiable urge to learn. However, as in all things, the compensation I receive is for the time and dedication I've invested.</p>#}
+{#        <p>My aspirations are twofold: to have my efforts appreciated and to find opportunities that not only utilize my skills but also allow me to grow, produce, and continue my learning journey.</p>#}
+{#        <p>If my work resonates with you, or if you see an avenue where we can collaborate, please don't hesitate to <a href="mailto:your.email@example.com">reach out</a>. Together, let's create, innovate, and push the boundaries of what's possible.</p>#}
+{#        <p>Warm regards,</p>#}
+{#        <p><strong>[Your Name]</strong></p>#}
+
 	<main class="main main--home">
+
 		<section class="projects">
+
 			{% for project in projects %}
 				<a class="u-bare-link" href="{{ url_for('project', slug=project['slug']) }}">
+
 					<article class="project-card">
 						<img
 								class="project-card__image"

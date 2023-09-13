@@ -114,6 +114,22 @@ See the media queries below */
 	display : none;
 	}
 
+           body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center; /* vertical alignment */
+            justify-content: center; /* horizontal alignment */
+            flex-direction: column; /* stack children vertically */
+        }
+
+        .container {
+            width: 70%; /* Adjust this value to your preference */
+            text-align: center; /* Center text within each element */
+        }
+
 /* Comes into effect when the screen is 400px wide. Reveals the second and second-to-last date link*/
 @media screen and (min-width : 25rem)
 {
@@ -134,15 +150,11 @@ See the media queries below */
 		}
 	}
 
-/* Changes the background colour of the current date. This class is applied conditionally
-by logic in the jinja template */
 .dates__link--current
 {
 	background : #F2B5A4;
 	}
 
-/* Ensures the day of the week and the date number sit on top of each other and are
-centered within the allotted space */
 .date
 {
 	display        : flex;
@@ -203,3 +215,18 @@ centered within the allotted space */
 	background-color : unset;
 	cursor           : pointer;
 	}
+body {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	align-items: center; /* vertical alignment */
+	justify-content: center; /* horizontal alignment */
+	flex-direction: column; /* stack children vertically */
+}
+
+.container {
+	width: 70%; /* Adjust this value to your preference */
+	text-align: center; /* Center text within each element */
+}

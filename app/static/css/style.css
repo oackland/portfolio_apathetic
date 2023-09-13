@@ -49,6 +49,15 @@ body{
 	margin          : 0 auto;
 	}
 
+.main-article{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	justify-items: center;
+}
+
 .main--about,
 .main--error
 {
@@ -94,6 +103,18 @@ body{
 	font-size: 1.4rem;
 
 	}
+
+.main-proj{
+	displa: flex;
+	align-items: center;
+	justify-items: center;
+	margin      : 0;
+	font-size   : 2rem;
+	width: inherit;
+	line-height : 150%;
+
+}
+
 
 .projects
 {
