@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: gunicorn app:app -b 0.0.0.0:5011
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_APP=app.py
+  nginx:
+    image: nginx:latest
+    ports:
+      - "5011:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    depends_on:
+      - web
