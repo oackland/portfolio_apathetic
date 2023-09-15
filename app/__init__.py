@@ -1,4 +1,5 @@
 from flask import Flask, render_template, abort, redirect
+from flask_swagger_ui import get_swaggerui_blueprint
 from .blueprints.task.routes import pages
 from .blueprints.api.routes import api
 from dotenv import load_dotenv
@@ -22,6 +23,18 @@ app.db = client.get_default_database()
 # Register blueprint
 app.register_blueprint(pages)
 app.register_blueprint(api)
+
+# Setup swagger UI
+SWAGGER_URL = '/swagger'
+API_URL = '/static/swagger.json'  # Ensure your swagger spec file is located at this path
+swaggerui_blueprint = get_swaggerui_blueprint(
+    SWAGGER_URL,
+    API_URL,
+    config={
+        'app_name': "Your App Name"
+    }
+)
+app.register_blueprint(swaggerui_blueprint, url_prefix=SWAGGER_URL)
 
 MYSITES = {
     "gitpage": "https://portfolio.apathetic.app/api/git",

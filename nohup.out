@@ -11741,3 +11741,554 @@ Traceback (most recent call last):
   File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 950, in build
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'project'. Did you forget to specify values ['slug']?
+127.0.0.1 - - [15/Sep/2023 01:35:11] "GET /api/git HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:35:12] "GET /favicon.ico HTTP/1.0" 500 -
+Traceback (most recent call last):
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 2213, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 2193, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/app/__init__.py", line 109, in page_not_found
+    return render_template("404.html"), 404
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/app/templates/404.html", line 21, in top-level template code
+    <a href="{{ url_for('project')}}">Go to home</a>
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'project'. Did you forget to specify values ['slug']?
+127.0.0.1 - - [15/Sep/2023 01:35:15] "GET /favicon.ico HTTP/1.0" 500 -
+Traceback (most recent call last):
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 2213, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 2193, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/app/__init__.py", line 109, in page_not_found
+    return render_template("404.html"), 404
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/app/templates/404.html", line 21, in top-level template code
+    <a href="{{ url_for('project')}}">Go to home</a>
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'project'. Did you forget to specify values ['slug']?
+127.0.0.1 - - [15/Sep/2023 01:35:18] "GET /project/homework HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:35:18] "GET /static/css/pokemon.css HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:35:18] "GET /static/js/pokemon.js HTTP/1.0" 304 -
+127.0.0.1 - - [15/Sep/2023 01:35:18] "GET /favicon.ico HTTP/1.0" 500 -
+Traceback (most recent call last):
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 2213, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 2193, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/app/__init__.py", line 109, in page_not_found
+    return render_template("404.html"), 404
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/app/templates/404.html", line 21, in top-level template code
+    <a href="{{ url_for('project')}}">Go to home</a>
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'project'. Did you forget to specify values ['slug']?
+127.0.0.1 - - [15/Sep/2023 01:35:20] "GET /favicon.ico HTTP/1.0" 500 -
+Traceback (most recent call last):
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 2213, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 2193, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/app/__init__.py", line 109, in page_not_found
+    return render_template("404.html"), 404
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/app/templates/404.html", line 21, in top-level template code
+    <a href="{{ url_for('project')}}">Go to home</a>
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'project'. Did you forget to specify values ['slug']?
+127.0.0.1 - - [15/Sep/2023 01:35:20] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:35:22] "GET /favicon.ico HTTP/1.0" 500 -
+Traceback (most recent call last):
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 2213, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 2193, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/app/__init__.py", line 109, in page_not_found
+    return render_template("404.html"), 404
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/app/templates/404.html", line 21, in top-level template code
+    <a href="{{ url_for('project')}}">Go to home</a>
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'project'. Did you forget to specify values ['slug']?
+127.0.0.1 - - [15/Sep/2023 01:35:23] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:35:25] "GET /favicon.ico HTTP/1.0" 500 -
+Traceback (most recent call last):
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 2213, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 2193, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/app/__init__.py", line 109, in page_not_found
+    return render_template("404.html"), 404
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/app/templates/404.html", line 21, in top-level template code
+    <a href="{{ url_for('project')}}">Go to home</a>
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'project'. Did you forget to specify values ['slug']?
+127.0.0.1 - - [15/Sep/2023 01:35:25] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:38:56] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:39:56] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:40:56] "GET /api/available HTTP/1.0" 200 -
+ * Detected change in '/home/oackland/personal_projects/myWebApps/testing_docker/app/__init__.py', reloading
+ * Restarting with stat
+Traceback (most recent call last):
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/cli.py", line 898, in run_command
+    app = info.load_app()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/cli.py", line 309, in load_app
+    app = locate_app(import_name, name)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/cli.py", line 219, in locate_app
+    __import__(module_name)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/app/__init__.py", line 29, in <module>
+    swaggerui_blueprint = get_swaggerui_blueprint(
+NameError: name 'get_swaggerui_blueprint' is not defined
+ * Debugger is active!
+ * Debugger PIN: 965-399-008
+127.0.0.1 - - [15/Sep/2023 01:41:56] "GET /api/available HTTP/1.0" 500 -
+Traceback (most recent call last):
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/cli.py", line 907, in app
+    raise err from None
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/cli.py", line 898, in run_command
+    app = info.load_app()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/cli.py", line 309, in load_app
+    app = locate_app(import_name, name)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/cli.py", line 219, in locate_app
+    __import__(module_name)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/app/__init__.py", line 29, in <module>
+    swaggerui_blueprint = get_swaggerui_blueprint(
+NameError: name 'get_swaggerui_blueprint' is not defined
+127.0.0.1 - - [15/Sep/2023 01:41:56] "GET /api/available?__debugger__=yes&cmd=resource&f=style.css HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:41:56] "GET /api/available?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:41:56] "GET /api/available?__debugger__=yes&cmd=resource&f=console.png HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:41:57] "GET /api/available?__debugger__=yes&cmd=resource&f=console.png HTTP/1.0" 304 -
+127.0.0.1 - - [15/Sep/2023 01:42:34] "GET /static/swagger HTTP/1.0" 500 -
+Traceback (most recent call last):
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/cli.py", line 907, in app
+    raise err from None
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/werkzeug/debug/__init__.py", line 330, in debug_application
+    app_iter = self.app(environ, start_response)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/cli.py", line 907, in app
+    raise err from None
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/cli.py", line 898, in run_command
+    app = info.load_app()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/cli.py", line 309, in load_app
+    app = locate_app(import_name, name)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/cli.py", line 219, in locate_app
+    __import__(module_name)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/app/__init__.py", line 29, in <module>
+    swaggerui_blueprint = get_swaggerui_blueprint(
+NameError: name 'get_swaggerui_blueprint' is not defined
+127.0.0.1 - - [15/Sep/2023 01:42:34] "GET /static/swagger?__debugger__=yes&cmd=resource&f=style.css HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:42:34] "GET /static/swagger?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:42:34] "GET /static/swagger?__debugger__=yes&cmd=resource&f=console.png HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:42:34] "GET /static/swagger?__debugger__=yes&cmd=resource&f=console.png HTTP/1.0" 200 -
+ * Detected change in '/home/oackland/personal_projects/myWebApps/testing_docker/app/__init__.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 540-461-592
+127.0.0.1 - - [15/Sep/2023 01:44:40] "GET /static/swagger HTTP/1.0" 500 -
+Traceback (most recent call last):
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 502, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/scaffold.py", line 317, in send_static_file
+    return send_from_directory(
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/helpers.py", line 557, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/werkzeug/utils.py", line 574, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 2213, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 2193, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/app/__init__.py", line 122, in page_not_found
+    return render_template("404.html"), 404
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/app/templates/404.html", line 21, in top-level template code
+    <a href="{{ url_for('project')}}">Go to home</a>
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'project'. Did you forget to specify values ['slug']?
+127.0.0.1 - - [15/Sep/2023 01:44:41] "GET /static/swagger?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.0" 304 -
+127.0.0.1 - - [15/Sep/2023 01:44:41] "GET /static/swagger?__debugger__=yes&cmd=resource&f=style.css HTTP/1.0" 304 -
+127.0.0.1 - - [15/Sep/2023 01:44:41] "GET /static/swagger?__debugger__=yes&cmd=resource&f=console.png HTTP/1.0" 304 -
+127.0.0.1 - - [15/Sep/2023 01:44:41] "GET /static/swagger?__debugger__=yes&cmd=resource&f=console.png HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:46:14] "GET /static/swagger HTTP/1.0" 500 -
+Traceback (most recent call last):
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 502, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/scaffold.py", line 317, in send_static_file
+    return send_from_directory(
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/helpers.py", line 557, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/werkzeug/utils.py", line 574, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 2213, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 2193, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/app/__init__.py", line 122, in page_not_found
+    return render_template("404.html"), 404
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/app/templates/404.html", line 21, in top-level template code
+    <a href="{{ url_for('project')}}">Go to home</a>
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/flask/app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/oackland/personal_projects/myWebApps/testing_docker/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'project'. Did you forget to specify values ['slug']?
+127.0.0.1 - - [15/Sep/2023 01:46:14] "GET /static/swagger?__debugger__=yes&cmd=resource&f=style.css HTTP/1.0" 304 -
+127.0.0.1 - - [15/Sep/2023 01:46:14] "GET /static/swagger?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.0" 304 -
+127.0.0.1 - - [15/Sep/2023 01:46:14] "GET /static/swagger?__debugger__=yes&cmd=resource&f=console.png HTTP/1.0" 304 -
+127.0.0.1 - - [15/Sep/2023 01:46:14] "GET /static/swagger?__debugger__=yes&cmd=resource&f=console.png HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:46:21] "GET /swagger HTTP/1.0" 308 -
+127.0.0.1 - - [15/Sep/2023 01:46:21] "GET /swagger/ HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:46:21] "GET /swagger/swagger-ui-bundle.js HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:46:21] "GET /swagger/swagger-ui-standalone-preset.js HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:46:21] "GET /swagger/index.css HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:46:21] "GET /swagger/swagger-ui.css HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:46:22] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:46:22] "GET /swagger/favicon-32x32.png HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:46:22] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:47:44] "GET /swagger/ HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:47:44] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:47:45] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:47:47] "GET /swagger/ HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:47:48] "GET /static/swagger.json HTTP/1.0" 304 -
+127.0.0.1 - - [15/Sep/2023 01:47:48] "GET /swagger/favicon-32x32.png HTTP/1.0" 304 -
+127.0.0.1 - - [15/Sep/2023 01:47:48] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:47:56] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:48:56] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:49:56] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:50:56] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:56:04] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:56:56] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:57:40] "GET /swagger/ HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:57:41] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:57:41] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:57:56] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:57:57] "GET /swagger/ HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:57:58] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:57:58] "GET /swagger/favicon-32x32.png HTTP/1.0" 304 -
+127.0.0.1 - - [15/Sep/2023 01:57:58] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:58:18] "GET /swagger/ HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:58:18] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:58:18] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:58:32] "GET /swagger/ HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:58:32] "GET /swagger/favicon-32x32.png HTTP/1.0" 304 -
+127.0.0.1 - - [15/Sep/2023 01:58:32] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:58:32] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:58:39] "GET /swagger/ HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:58:39] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:58:39] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:58:56] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:59:05] "GET /swagger/ HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:59:05] "GET /swagger/favicon-32x32.png HTTP/1.0" 304 -
+127.0.0.1 - - [15/Sep/2023 01:59:06] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:59:06] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:59:20] "GET /swagger/ HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:59:20] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:59:21] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:59:35] "GET /swagger/ HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:59:36] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:59:36] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 01:59:56] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:00:16] "GET /swagger/ HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:00:16] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:00:16] "GET /swagger/favicon-32x32.png HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:00:16] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:00:56] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:01:56] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:02:45] "GET /swagger/ HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:02:46] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:02:46] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:02:56] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:35:19] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:35:19] "GET /static/img/API.png HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:35:19] "GET /static/img/react.png HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:35:19] "GET /static/img/flask.png HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:35:44] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:35:45] "GET /static/img/flask.png HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:35:45] "GET /static/img/react.png HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:35:45] "GET /static/img/API.png HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:47:46] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:48:56] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:49:56] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:50:56] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:51:56] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:52:56] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:53:56] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:54:49] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:54:54] "GET /swagger/ HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:54:54] "GET /swagger/swagger-ui-standalone-preset.js HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:54:54] "GET /swagger/index.css HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:54:54] "GET /swagger/swagger-ui.css HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:54:54] "GET /swagger/swagger-ui-bundle.js HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:54:54] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:54:54] "GET /swagger/favicon-16x16.png HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:54:55] "GET /static/swagger.json HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:54:56] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:55:56] "GET /api/available HTTP/1.0" 200 -
+127.0.0.1 - - [15/Sep/2023 02:56:56] "GET /api/available HTTP/1.0" 200 -

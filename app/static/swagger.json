@@ -1,0 +1,44 @@
+openapi: 3.0.0
+info:
+  title: Apathetic API
+  description: API documentation for portfolio.
+  version: 1.0.0
+
+paths:
+  /api/available:
+    get:
+      summary: Check API availability
+      description: Returns a message indicating if the API is available.
+      responses:
+        200:
+          description: API is available.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
+
+  /api/portfolio:
+    get:
+      summary: Retrieve portfolio items
+      description: Returns a list of portfolio items.
+      responses:
+        200:
+          description: Successful retrieval of portfolio items.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    description:
+                      type: string
+                    image:
+                      type: string
