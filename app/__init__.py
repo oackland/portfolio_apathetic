@@ -1,5 +1,6 @@
-from flask import Flask, render_template, abort, er
+from flask import Flask, render_template, abort, redirect
 from .blueprints.task.routes import pages
+from .blueprints.api.routes import api
 from dotenv import load_dotenv
 from pymongo import MongoClient
 import os
@@ -20,6 +21,12 @@ app.db = client.get_default_database()
 
 # Register blueprint
 app.register_blueprint(pages)
+app.register_blueprint(api)
+
+MYSITES = {
+    "gitpage": "https://portfolio.apathetic.app/api/git",
+    "api-available":"https://portfolio.apathetic.app/api/available"
+}
 
 projects = [
     {
@@ -27,7 +34,7 @@ projects = [
         "sub": "with Flask and MongoDB",
         "thumb": "img/flask.png",
         "hero": "img/autism_hero.jpg",
-        "categories": ["python", "web"],
+        "categories": ["python", "Flask"],
         "slug": "python_portfolio",
         "prod_endpoint": "pages.index",
     },
@@ -41,11 +48,11 @@ projects = [
     },
     {
         "name": "REST API",
-        "sub":  "Documentation with Postman",
+        "sub": "Documentation with Postman",
         "thumb": "img/API.png",
         "hero": "img/rest-api-docs.png",
         "categories": ["writing", "Database"],
-        "slug": "#",
+        "slug": MYSITES["api-available"],
     },
     {
         "name": "JAVA API",
@@ -55,27 +62,46 @@ projects = [
         "categories": ["Post", "Request"],
         "slug": "homework",
     },
+    {
+        "name": "GIT",
+        "sub": "GIT | GITHUB | GITPOD",
+        "thumb": "img/github.png",
+        "hero": "img/pookemon.png",
+        "categories": ["GIT", "GITHUB", "GITLAB"],
+        "slug": MYSITES["gitpage"],
+    },
 ]
 
 slug_to_project = {project["slug"]: project for project in projects}
+
 
 @app.route("/")
 def home():
     return render_template("home.html", projects=projects)
 
+
 @app.route("/about")
 def about():
     return render_template("about.html")
+
 
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
 
-@app.route("/project/<string:slug>", endpoint='project')
+
+@app.route("/project/<string:slug>", endpoint="project")
 def project_detail(slug):
     if slug not in slug_to_project:
         abort(404)
-    return render_template(f"project_{slug}.html", project=slug_to_project[slug])
+
+    # If the slug is a full URL, redirect to it
+    project = slug_to_project[slug]
+    if project['slug'].startswith(('http://', 'https://')):
+        return redirect(project['slug'])
+
+    # Otherwise, render the project template as usual
+    return render_template(f"project_{slug}.html", project=project)
 
 
 @app.errorhandler(404)

@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+
 
     <div class="this-container"></div>
     <section class="my-container">
@@ -17,28 +19,34 @@
 
 		<section class="projects">
 
-			{% for project in projects %}
-				<a class="u-bare-link" href="{{ url_for('project', slug=project['slug']) }}">
+{% for project in projects %}
+    {% if project['slug'].startswith(('http://', 'https://')) %}
+        <a class="u-bare-link" href="{{ project['slug'] }}">
+    {% else %}
+        <a class="u-bare-link" href="{{ url_for('project', slug=project['slug']) }}">
+    {% endif %}
 
-					<article class="project-card">
-						<img
-								class="project-card__image"
-								src="{{ url_for('static', filename=project['thumb']) }}"
-								alt="{{ project['name'] }} hero image"
-						/>
+        <article class="project-card">
+            <img
+                    class="project-card__image"
+                    src="{{ url_for('static', filename=project['thumb']) }}"
+                    alt="{{ project['name'] }} hero image"
+            />
 
-						<header class="project-card__meta">
-							<ul class="categories">
-								{% for category in project["categories"] %}
-									<li class="categories__tag">{{ category }}</li>
-								{% endfor %}
-							</ul>
+            <header class="project-card__meta">
+                <ul class="categories">
+                    {% for category in project["categories"] %}
+                        <li class="categories__tag">{{ category }}</li>
+                    {% endfor %}
+                </ul>
 
-							<h2 class="project-card__name">{{ project['name'] }}</h2>
-						</header>
-					</article>
-				</a>
-			{% endfor %}
+                <h2 class="project-card__name">{{ project['name'] }}</h2>
+            </header>
+        </article>
+    </a>
+{% endfor %}
+
 		</section>
 	</main>
+
 {% endblock %}
